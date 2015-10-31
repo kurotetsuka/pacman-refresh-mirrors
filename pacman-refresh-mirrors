@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [[ $(whoami) != "root" ]]; then
+	echo -en "You must be root to update mirrors.\n"
+	exit
+fi
+
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+cp /etc/pacman.d/mirrorlist.pacnew /etc/pacman.d/mirrorlist
+reflector --verbose -l 200 -p http --sort rate --save /etc/pacman.d/mirrorlist
