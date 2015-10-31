@@ -5,3 +5,9 @@ Run with:
 ```
 sudo pacman-refresh-mirrors
 ```
+
+## Dependencies
+```
+sudo pacman -Syu reflector rsync
+```
+
