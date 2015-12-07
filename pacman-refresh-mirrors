@@ -2,7 +2,7 @@
 
 if [[ $(whoami) != "root" ]]; then
 	echo -en "You must be root to update mirrors.\n"
-	exit
+	exit 1
 fi
 
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
