@@ -5,7 +5,7 @@ if [[ $(whoami) != "root" ]]; then
 	exit 1
 fi
 
-echo -en "Remember to install reflector and rsync!"
+echo -en "Remember to install reflector and rsync!\n"
 #pacman -S reflector rsync
 
 install -m 755 pacman-refresh-mirrors \
